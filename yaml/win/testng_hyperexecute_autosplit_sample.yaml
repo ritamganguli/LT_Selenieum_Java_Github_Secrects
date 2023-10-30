@@ -24,6 +24,7 @@ cacheDirectories:
 pre:
   # Skip execution of the tests in the pre step
   - mvn -Dmaven.repo.local=./.m2 dependency:resolve
+  - set MyKey=${{ .secrets.LT_Username }}
   - echo $MyKey
 
 post:
