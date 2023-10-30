@@ -15,7 +15,7 @@ public class Test1
 {
     RemoteWebDriver driver = null;
     public static String status = "passed";
-    public static String username = System.getenv("LT_USERNAME");
+    public static String username = System.getenv("MyKey");
     public static String access_key = System.getenv("LT_ACCESS_KEY");
 
     String testURL = "https://todomvc.com/examples/react/#/";
