@@ -18,6 +18,10 @@ shell: bash
 env:
   # PAT: ${{ .secrets.testKey }}
   CACHE_DIR: m2_cache_dir
+  MyKey: ${{ .secrets.LT_Username }}
+
+vars:
+ MyKey: ${{ .secrets.LT_Username }}
 
 cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
@@ -26,6 +30,7 @@ cacheDirectories:
 pre:
   # Skip execution of the tests in the pre step
   - mvn -Dmaven.repo.local=./.m2 dependency:resolve
+  - echo $MyKey
 
 post:
   - ls target/surefire-reports/
