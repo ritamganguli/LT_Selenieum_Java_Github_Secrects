@@ -10,7 +10,7 @@ on:
         required: true
       sampleRepoLink:
         description: Link to the HyperExecute sample repo
-        default: https://github.com/prateekLambda/cucumber-selenium-hyperexecute-sample.git
+        default: https://github.com/ritamganguli/LT_Selenieum_Java_Github_Secrects.git
         required: true
 jobs:
   Cucumber-Sample-Hyperexeucte:
